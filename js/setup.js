@@ -33,14 +33,14 @@ var wizards = [
   }
 ];
 
-//функция рендера DOM элемента
-var renderWizard = function(wizard) {
+// функция рендера DOM элемента
+var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
   return wizardElement;
-}
+};
 
 // функция вставки DOM элемента
 
@@ -64,6 +64,3 @@ function getRandomElement(arr) {
   var random = Math.floor(Math.random() * arr.length);
   return arr[random];
 }
-
-
-

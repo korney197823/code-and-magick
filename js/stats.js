@@ -10,21 +10,17 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.strokeRect(100, 10, 420, 270);
   ctx.fillRect(100, 10, 420, 270);
 
-
-
   ctx.fillStyle = '#000'; // black;
   ctx.font = '16px PT Mono';
 
   // ctx.fillText('Ура вы победили!', 120, 40);
 
   var max = -1;
-  var maxIndex = -1;
 
   for (var i = 0; i < times.length; i++) {
     var time = times[i];
     if (time > max) {
       max = time;
-      maxIndex = i;
     }
   }
 
